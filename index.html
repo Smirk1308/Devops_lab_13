@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CampusConnect — High-Fidelity UI Prototype (Exp 13)</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="desktop-wrapper">
+    <aside class="sidebar-panel">
+      <div class="lab-badge">EXP 13 • UI/UX DESIGN LAB</div>
+      <h1>CampusConnect</h1>
+      <p class="subtitle">High-Fidelity Event Registration App Prototype</p>
+      
+      <div class="meta-card">
+        <div class="meta-row"><span class="meta-lbl">Student:</span> <span class="meta-val">Sharma Shubh</span></div>
+        <div class="meta-row"><span class="meta-lbl">USN:</span> <span class="meta-val">4NI25CS191</span></div>
+        <div class="meta-row"><span class="meta-lbl">Semester:</span> <span class="meta-val">3rd Sem, Sec-G</span></div>
+        <div class="meta-row"><span class="meta-lbl">Course:</span> <span class="meta-val">DevOps & UI/UX Design</span></div>
+      </div>
+
+      <div class="flow-nav">
+        <h3>User Flow Navigation</h3>
+        <button class="nav-step-btn active" data-target="screen-home">1. Home Screen (Events)</button>
+        <button class="nav-step-btn" data-target="screen-details">2. Event Details Screen</button>
+        <button class="nav-step-btn" data-target="screen-form">3. Registration Form</button>
+        <button class="nav-step-btn" data-target="screen-confirm">4. Confirmation Pass</button>
+      </div>
+
+      <div class="figma-link-box">
+        <p>Official Figma Design File:</p>
+        <a href="https://www.figma.com/design/8hmZaqz3nlZDO9j7b6zANH" target="_blank" class="figma-cta">
+          <svg width="18" height="18" viewBox="0 0 38 57" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M19 28.5C19 23.2533 23.2533 19 28.5 19C33.7467 19 38 23.2533 38 28.5C38 33.7467 33.7467 38 28.5 38C23.2533 38 19 33.7467 19 28.5Z" fill="#1ABCFE"/>
+            <path d="M0 47.5C0 42.2533 4.25329 38 9.5 38H19V47.5C19 52.7467 14.7467 57 9.5 57C4.25329 57 0 52.7467 0 47.5Z" fill="#0ACF83"/>
+            <path d="M19 0V19H28.5C33.7467 19 38 14.7467 38 9.5C38 4.25329 33.7467 0 28.5 0H19Z" fill="#FF7262"/>
+            <path d="M0 9.5C0 14.7467 4.25329 19 9.5 19H19V0H9.5C4.25329 0 0 4.25329 0 9.5Z" fill="#F24E1E"/>
+            <path d="M0 28.5C0 33.7467 4.25329 38 9.5 38H19V19H9.5C4.25329 19 0 23.2533 0 28.5Z" fill="#A259FF"/>
+          </svg>
+          Open in Figma Workspace
+        </a>
+      </div>
+    </aside>
+
+    <main class="device-viewport">
+      <div class="iphone-shell">
+        <div class="screen-container">
+          <!-- TOP STATUS BAR -->
+          <div class="ios-status-bar">
+            <span class="status-time">9:41</span>
+            <div class="dynamic-notch"></div>
+            <span class="status-icons">📶 🔋 100%</span>
+          </div>
+
+          <!-- SCREEN 1: HOME -->
+          <div id="screen-home" class="screen active">
+            <div class="screen-scroll">
+              <header class="app-header">
+                <div>
+                  <span class="eyebrow">CAMPUS CONNECT • NIE MYSURU</span>
+                  <h2>Hello, Shubh 👋</h2>
+                </div>
+                <div class="avatar-badge">SS</div>
+              </header>
+
+              <div class="search-bar">
+                <span class="search-icon">🔍</span>
+                <input type="text" placeholder="Search events, workshops, hackathons..." readonly>
+              </div>
+
+              <div class="category-pills">
+                <button class="pill active" data-cat="all">All Events</button>
+                <button class="pill" data-cat="tech">Technical</button>
+                <button class="pill" data-cat="cult">Cultural</button>
+                <button class="pill" data-cat="sport">Sports</button>
+              </div>
+
+              <div class="section-title-row">
+                <h3>Featured Campus Events</h3>
+              </div>
+
+              <!-- Main Interactive Event Card -->
+              <div class="event-card featured-card" id="card-hacknie">
+                <div class="card-banner hackathon-banner">
+                  <span class="banner-tag">HACKATHON • 24 HRS</span>
+                  <span class="banner-status">⚡ Fast Filling</span>
+                </div>
+                <div class="card-body">
+                  <h4>HackNIE 2026: DevOps & Cloud Sprint</h4>
+                  <p class="card-meta">📅 Sat, 21 Nov 2026 • 10:00 AM</p>
+                  <p class="card-venue">📍 Sir MV Auditorium, South Campus</p>
+                  <div class="card-footer">
+                    <span class="seats-badge">🟢 42 seats left</span>
+                    <button class="btn btn-primary btn-sm view-details-trigger">View Details →</button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Second Event Card -->
+              <div class="event-card">
+                <div class="card-banner workshop-banner">
+                  <span class="banner-tag">WORKSHOP • KUBERNETES</span>
+                  <span class="banner-status">Hands-on</span>
+                </div>
+                <div class="card-body">
+                  <h4>Production Docker & Kubernetes Workshop</h4>
+                  <p class="card-meta">📅 Fri, 28 Nov 2026 • 2:00 PM</p>
+                  <p class="card-venue">📍 CSE Lab 3, 2nd Floor</p>
+                  <div class="card-footer">
+                    <span class="seats-badge yellow">🟡 18 seats left</span>
+                    <button class="btn btn-secondary btn-sm">Upcoming</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Bottom Navigation Bar -->
+            <nav class="bottom-nav">
+              <a href="#home" class="nav-item active">
+                <span class="nav-icon">🏠</span>
+                <span class="nav-label">Home</span>
+              </a>
+              <a href="#myevents" class="nav-item">
+                <span class="nav-icon">📅</span>
+                <span class="nav-label">My Events</span>
+              </a>
+              <a href="#passes" class="nav-item">
+                <span class="nav-icon">🎟️</span>
+                <span class="nav-label">Passes</span>
+              </a>
+              <a href="#profile" class="nav-item">
+                <span class="nav-icon">👤</span>
+                <span class="nav-label">Profile</span>
+              </a>
+            </nav>
+          </div>
+
+          <!-- SCREEN 2: EVENT DETAILS -->
+          <div id="screen-details" class="screen">
+            <div class="screen-top-bar">
+              <button class="icon-btn back-to-home">← Back</button>
+              <span class="bar-title">Event Overview</span>
+              <button class="icon-btn">📤</button>
+            </div>
+
+            <div class="screen-scroll">
+              <div class="details-hero">
+                <span class="badge-accent">NATIONAL LEVEL HACKATHON</span>
+                <h2>HackNIE 2026: 24-Hr DevOps Sprint</h2>
+                <p class="hero-org">Organized by Dept of CSE • Supported by IEEE & ACM</p>
+              </div>
+
+              <div class="info-card">
+                <div class="info-item">
+                  <span class="info-lbl">📅 Date & Time</span>
+                  <span class="info-val">21 Nov 2026, 10:00 AM</span>
+                </div>
+                <div class="info-item">
+                  <span class="info-lbl">📍 Venue</span>
+                  <span class="info-val">Sir MV Auditorium, NIE</span>
+                </div>
+                <div class="info-item">
+                  <span class="info-lbl">👥 Capacity</span>
+                  <span class="info-val">42 / 100 Seats Remaining</span>
+                </div>
+                <div class="info-item">
+                  <span class="info-lbl">⏳ Deadline</span>
+                  <span class="info-val">19 Nov 2026, 11:59 PM</span>
+                </div>
+              </div>
+
+              <div class="desc-card">
+                <h4>About the Event</h4>
+                <p>Compete in an intensive 24-hour engineering hackathon designing containerized microservices, CI/CD automated pipelines, and cloud-native solutions. Features live jury evaluation, free food, mentorship, and cash awards.</p>
+                <div class="perks-row">
+                  <span>🏆 ₹50,000 Prizes</span>
+                  <span>🍕 Free Meals</span>
+                  <span>📜 Certificates</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="sticky-cta-bar">
+              <div class="cta-price">
+                <span class="cta-price-lbl">REGISTRATION FEE</span>
+                <span class="cta-price-val">FREE</span>
+              </div>
+              <button class="btn btn-primary go-to-register">Register Now →</button>
+            </div>
+          </div>
+
+          <!-- SCREEN 3: REGISTRATION FORM -->
+          <div id="screen-form" class="screen">
+            <div class="screen-top-bar">
+              <button class="icon-btn back-to-details">← Back</button>
+              <span class="bar-title">Register for Event</span>
+              <span class="step-indicator">Step 2/2</span>
+            </div>
+
+            <div class="screen-scroll">
+              <div class="mini-event-pill">
+                🎟️ Registering for: <strong>HackNIE 2026 (21 Nov)</strong>
+              </div>
+
+              <form id="regForm" class="registration-form">
+                <div class="form-group">
+                  <label for="fullName">Full Name *</label>
+                  <input type="text" id="fullName" value="Sharma Shubh" required>
+                  <span class="helper-text">Enter full student name as on college ID</span>
+                </div>
+
+                <div class="form-group">
+                  <label for="usn">Student ID / USN *</label>
+                  <input type="text" id="usn" value="4NI25CS191" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="email">College Email *</label>
+                  <input type="email" id="email" value="2025cs_sharmashubh_g@nie.ac.in" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="dept">Department *</label>
+                  <input type="text" id="dept" value="Computer Science & Engineering" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="sem">Semester & Section *</label>
+                  <input type="text" id="sem" value="3rd Semester • Section G" required>
+                </div>
+
+                <div class="form-checkbox">
+                  <input type="checkbox" id="terms" checked required>
+                  <label for="terms">I agree to the college laboratory and event guidelines.</label>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-block">Submit Registration ✓</button>
+              </form>
+            </div>
+          </div>
+
+          <!-- SCREEN 4: CONFIRMATION -->
+          <div id="screen-confirm" class="screen">
+            <div class="screen-scroll confirm-layout">
+              <div class="success-badge-circle">✓</div>
+              <h2>Registration Successful!</h2>
+              <p class="confirm-sub">Your seat for HackNIE 2026 has been reserved. A confirmation digital pass was sent to your email.</p>
+
+              <div class="digital-ticket">
+                <div class="ticket-header">
+                  <span class="ticket-type">CAMPUS PASS</span>
+                  <span class="ticket-id">#NIE-2026-9481</span>
+                </div>
+                <div class="ticket-divider"></div>
+                <div class="ticket-rows">
+                  <div class="t-row"><span class="t-lbl">Event:</span> <span class="t-val">HackNIE 2026: DevOps Sprint</span></div>
+                  <div class="t-row"><span class="t-lbl">Participant:</span> <span class="t-val">Sharma Shubh</span></div>
+                  <div class="t-row"><span class="t-lbl">USN:</span> <span class="t-val">4NI25CS191</span></div>
+                  <div class="t-row"><span class="t-lbl">Date & Venue:</span> <span class="t-val">21 Nov 2026 • Sir MV Hall</span></div>
+                  <div class="t-row"><span class="t-lbl">Seat Status:</span> <span class="t-val confirmed">Confirmed (Desk A-14)</span></div>
+                </div>
+                <div class="qr-placeholder">
+                  <span>📱 Show this Pass at Registration Desk</span>
+                </div>
+              </div>
+
+              <button class="btn btn-primary btn-block back-to-home-btn">Back to Home 🏠</button>
+              <button class="btn btn-secondary btn-block view-my-events">View My Registered Events</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
