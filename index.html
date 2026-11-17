@@ -21,6 +21,7 @@
         <div class="meta-row"><span class="meta-lbl">USN:</span> <span class="meta-val">4NI25CS191</span></div>
         <div class="meta-row"><span class="meta-lbl">Semester:</span> <span class="meta-val">3rd Sem, Sec-G</span></div>
         <div class="meta-row"><span class="meta-lbl">Course:</span> <span class="meta-val">DevOps & UI/UX Design</span></div>
+        <div class="meta-row"><span class="meta-lbl">Institution:</span> <span class="meta-val">NIE Mysuru</span></div>
       </div>
 
       <div class="flow-nav">
@@ -32,7 +33,7 @@
       </div>
 
       <div class="figma-link-box">
-        <p>Official Figma Design File:</p>
+        <p>Live Figma Design File:</p>
         <a href="https://www.figma.com/design/8hmZaqz3nlZDO9j7b6zANH" target="_blank" class="figma-cta">
           <svg width="18" height="18" viewBox="0 0 38 57" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M19 28.5C19 23.2533 23.2533 19 28.5 19C33.7467 19 38 23.2533 38 28.5C38 33.7467 33.7467 38 28.5 38C23.2533 38 19 33.7467 19 28.5Z" fill="#1ABCFE"/>
@@ -49,11 +50,19 @@
     <main class="device-viewport">
       <div class="iphone-shell">
         <div class="screen-container">
-          <!-- TOP STATUS BAR -->
+          <!-- TOP STATUS BAR WITH DYNAMIC ISLAND -->
           <div class="ios-status-bar">
             <span class="status-time">9:41</span>
             <div class="dynamic-notch"></div>
-            <span class="status-icons">📶 🔋 100%</span>
+            <span class="status-icons">
+              <svg width="48" height="12" viewBox="0 0 54 14" fill="none">
+                <path d="M1 11H3.5V13H1V11ZM5.5 8H8V13H5.5V8ZM10 5H12.5V13H10V5ZM14.5 2H17V13H14.5V2Z" fill="#0F172A"/>
+                <path d="M25 3C22.5 3 20.3 4 18.7 5.7L25 13L31.3 5.7C29.7 4 27.5 3 25 3Z" fill="#0F172A"/>
+                <rect x="36" y="2" width="16" height="10" rx="3" stroke="#0F172A" stroke-width="1.5"/>
+                <rect x="38" y="4" width="11" height="6" rx="1.5" fill="#0F172A"/>
+                <path d="M53 5.5V8.5" stroke="#0F172A" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </span>
           </div>
 
           <!-- SCREEN 1: HOME -->
@@ -61,40 +70,50 @@
             <div class="screen-scroll">
               <header class="app-header">
                 <div>
-                  <span class="eyebrow">CAMPUS CONNECT • NIE MYSURU</span>
-                  <h2>Hello, Shubh 👋</h2>
+                  <span class="eyebrow">THE NATIONAL INSTITUTE OF ENGINEERING</span>
+                  <h2>Campus Events 👋</h2>
                 </div>
                 <div class="avatar-badge">SS</div>
               </header>
 
               <div class="search-bar">
-                <span class="search-icon">🔍</span>
-                <input type="text" placeholder="Search events, workshops, hackathons..." readonly>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M21 21L15 15M17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10Z" stroke="#64748B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <input type="text" placeholder="Search hackathons, workshops, clubs..." readonly>
               </div>
 
-              <div class="category-pills">
-                <button class="pill active" data-cat="all">All Events</button>
-                <button class="pill" data-cat="tech">Technical</button>
-                <button class="pill" data-cat="cult">Cultural</button>
-                <button class="pill" data-cat="sport">Sports</button>
+              <!-- Refined Category Tabs Bar -->
+              <div class="category-tabs-bar">
+                <button class="cat-tab active" data-cat="all">All Events</button>
+                <button class="cat-tab" data-cat="tech">Technical</button>
+                <button class="cat-tab" data-cat="cult">Cultural</button>
+                <button class="cat-tab" data-cat="sport">Sports</button>
               </div>
 
               <div class="section-title-row">
-                <h3>Featured Campus Events</h3>
+                <h3>Featured Events</h3>
+                <span class="see-all-link">View all (12) →</span>
               </div>
 
-              <!-- Main Interactive Event Card -->
+              <!-- Featured Interactive Event Card -->
               <div class="event-card featured-card" id="card-hacknie">
                 <div class="card-banner hackathon-banner">
-                  <span class="banner-tag">HACKATHON • 24 HRS</span>
-                  <span class="banner-status">⚡ Fast Filling</span>
+                  <div class="banner-top-row">
+                    <span class="banner-tag">HACKATHON • 24 HRS</span>
+                    <span class="banner-urgency">⚡ 42 Seats Left</span>
+                  </div>
+                  <h4 class="banner-event-title">HackNIE 2026: DevOps Sprint</h4>
                 </div>
                 <div class="card-body">
-                  <h4>HackNIE 2026: DevOps & Cloud Sprint</h4>
-                  <p class="card-meta">📅 Sat, 21 Nov 2026 • 10:00 AM</p>
-                  <p class="card-venue">📍 Sir MV Auditorium, South Campus</p>
+                  <div class="meta-row-item">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="18" rx="2" stroke="#64748B" stroke-width="2"/><path d="M16 2V6M8 2V6M3 10H21" stroke="#64748B" stroke-width="2"/></svg>
+                    <span>Saturday, 21 Nov 2026 • 10:00 AM</span>
+                  </div>
+                  <div class="meta-row-item">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M12 21C16 17 20 13.4183 20 9C20 4.58172 16.4183 1 12 1C7.58172 1 4 4.58172 4 9C4 13.4183 8 17 12 21Z" stroke="#64748B" stroke-width="2"/><circle cx="12" cy="9" r="3" stroke="#64748B" stroke-width="2"/></svg>
+                    <span>Sir MV Auditorium, NIE South Campus</span>
+                  </div>
                   <div class="card-footer">
-                    <span class="seats-badge">🟢 42 seats left</span>
+                    <span class="live-status-tag"><span class="dot-live"></span> Active Registration</span>
                     <button class="btn btn-primary btn-sm view-details-trigger">View Details →</button>
                   </div>
                 </div>
@@ -103,64 +122,72 @@
               <!-- Second Event Card -->
               <div class="event-card">
                 <div class="card-banner workshop-banner">
-                  <span class="banner-tag">WORKSHOP • KUBERNETES</span>
-                  <span class="banner-status">Hands-on</span>
+                  <span class="banner-tag">WORKSHOP • KUBERNETES & CI/CD</span>
                 </div>
                 <div class="card-body">
-                  <h4>Production Docker & Kubernetes Workshop</h4>
-                  <p class="card-meta">📅 Fri, 28 Nov 2026 • 2:00 PM</p>
-                  <p class="card-venue">📍 CSE Lab 3, 2nd Floor</p>
-                  <div class="card-footer">
-                    <span class="seats-badge yellow">🟡 18 seats left</span>
-                    <button class="btn btn-secondary btn-sm">Upcoming</button>
+                  <h4>Hands-on Docker & Kubernetes Workshop</h4>
+                  <div class="meta-row-item">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="18" rx="2" stroke="#64748B" stroke-width="2"/><path d="M16 2V6M8 2V6M3 10H21" stroke="#64748B" stroke-width="2"/></svg>
+                    <span>Friday, 28 Nov 2026 • 2:00 PM</span>
+                  </div>
+                  <div class="meta-row-item">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M12 21C16 17 20 13.4183 20 9C20 4.58172 16.4183 1 12 1C7.58172 1 4 4.58172 4 9C4 13.4183 8 17 12 21Z" stroke="#64748B" stroke-width="2"/><circle cx="12" cy="9" r="3" stroke="#64748B" stroke-width="2"/></svg>
+                    <span>CSE Lab 3, 2nd Floor • 18 seats left</span>
                   </div>
                 </div>
               </div>
             </div>
 
-            <!-- Bottom Navigation Bar -->
-            <nav class="bottom-nav">
-              <a href="#home" class="nav-item active">
-                <span class="nav-icon">🏠</span>
-                <span class="nav-label">Home</span>
+            <!-- Refined iOS Tab Bar with SVG Icons -->
+            <nav class="bottom-tab-bar">
+              <a href="#home" class="tab-item active">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M3 9.5L12 3L21 9.5V20C21 20.5523 20.5523 21 20 21H4C3.44772 21 3 20.5523 3 20V9.5Z" stroke="#2457C5" stroke-width="2" stroke-linecap="round"/><path d="M9 21V12H15V21" stroke="#2457C5" stroke-width="2"/></svg>
+                <span>Home</span>
+                <span class="active-dot"></span>
               </a>
-              <a href="#myevents" class="nav-item">
-                <span class="nav-icon">📅</span>
-                <span class="nav-label">My Events</span>
+              <a href="#myevents" class="tab-item">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="18" rx="2" stroke="#94A3B8" stroke-width="2"/><path d="M16 2V6M8 2V6M3 10H21" stroke="#94A3B8" stroke-width="2"/></svg>
+                <span>My Events</span>
               </a>
-              <a href="#passes" class="nav-item">
-                <span class="nav-icon">🎟️</span>
-                <span class="nav-label">Passes</span>
+              <a href="#passes" class="tab-item">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="2" y="6" width="20" height="12" rx="3" stroke="#94A3B8" stroke-width="2"/><circle cx="7" cy="12" r="1.5" fill="#94A3B8"/></svg>
+                <span>Passes</span>
               </a>
-              <a href="#profile" class="nav-item">
-                <span class="nav-icon">👤</span>
-                <span class="nav-label">Profile</span>
+              <a href="#profile" class="tab-item">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="7" r="4" stroke="#94A3B8" stroke-width="2"/><path d="M4 21C4 16.5 7.5 13 12 13C16.5 13 20 16.5 20 21" stroke="#94A3B8" stroke-width="2"/></svg>
+                <span>Profile</span>
               </a>
+              <div class="home-indicator"></div>
             </nav>
           </div>
 
           <!-- SCREEN 2: EVENT DETAILS -->
           <div id="screen-details" class="screen">
             <div class="screen-top-bar">
-              <button class="icon-btn back-to-home">← Back</button>
+              <button class="icon-btn back-to-home">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M15 18L9 12L15 6" stroke="#2457C5" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Back
+              </button>
               <span class="bar-title">Event Overview</span>
-              <button class="icon-btn">📤</button>
+              <button class="icon-btn-ghost">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M4 12V20C4 20.5523 4.44772 21 5 21H19C19.5523 21 20 20.5523 20 20V12M16 6L12 2M12 2L8 6M12 2V15" stroke="#64748B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
             </div>
 
             <div class="screen-scroll">
               <div class="details-hero">
-                <span class="badge-accent">NATIONAL LEVEL HACKATHON</span>
+                <span class="badge-accent">NATIONAL LEVEL TECHNICAL SPRINT</span>
                 <h2>HackNIE 2026: 24-Hr DevOps Sprint</h2>
-                <p class="hero-org">Organized by Dept of CSE • Supported by IEEE & ACM</p>
+                <p class="hero-org">Hosted by Dept of CSE • Supported by IEEE Student Branch</p>
               </div>
 
               <div class="info-card">
                 <div class="info-item">
                   <span class="info-lbl">📅 Date & Time</span>
-                  <span class="info-val">21 Nov 2026, 10:00 AM</span>
+                  <span class="info-val">21 Nov 2026, 10:00 AM – 24 Hrs</span>
                 </div>
                 <div class="info-item">
-                  <span class="info-lbl">📍 Venue</span>
+                  <span class="info-lbl">📍 Location</span>
                   <span class="info-val">Sir MV Auditorium, NIE</span>
                 </div>
                 <div class="info-item">
@@ -174,11 +201,11 @@
               </div>
 
               <div class="desc-card">
-                <h4>About the Event</h4>
-                <p>Compete in an intensive 24-hour engineering hackathon designing containerized microservices, CI/CD automated pipelines, and cloud-native solutions. Features live jury evaluation, free food, mentorship, and cash awards.</p>
+                <h4>About the Hackathon</h4>
+                <p>Compete in an intensive 24-hour engineering sprint building containerized microservices, automated CI/CD deployment pipelines, and cloud systems with live jury evaluation.</p>
                 <div class="perks-row">
-                  <span>🏆 ₹50,000 Prizes</span>
-                  <span>🍕 Free Meals</span>
+                  <span>🏆 ₹50K Prizes</span>
+                  <span>🍕 Free Food</span>
                   <span>📜 Certificates</span>
                 </div>
               </div>
@@ -186,19 +213,23 @@
 
             <div class="sticky-cta-bar">
               <div class="cta-price">
-                <span class="cta-price-lbl">REGISTRATION FEE</span>
-                <span class="cta-price-val">FREE</span>
+                <span class="cta-price-lbl">REGISTRATION</span>
+                <span class="cta-price-val">FREE PASS</span>
               </div>
               <button class="btn btn-primary go-to-register">Register Now →</button>
+              <div class="home-indicator"></div>
             </div>
           </div>
 
           <!-- SCREEN 3: REGISTRATION FORM -->
           <div id="screen-form" class="screen">
             <div class="screen-top-bar">
-              <button class="icon-btn back-to-details">← Back</button>
+              <button class="icon-btn back-to-details">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M15 18L9 12L15 6" stroke="#2457C5" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Back
+              </button>
               <span class="bar-title">Register for Event</span>
-              <span class="step-indicator">Step 2/2</span>
+              <span class="step-pill-indicator">Step 2 of 2</span>
             </div>
 
             <div class="screen-scroll">
@@ -219,12 +250,12 @@
                 </div>
 
                 <div class="form-group">
-                  <label for="email">College Email *</label>
+                  <label for="email">College Email Address *</label>
                   <input type="email" id="email" value="2025cs_sharmashubh_g@nie.ac.in" required>
                 </div>
 
                 <div class="form-group">
-                  <label for="dept">Department *</label>
+                  <label for="dept">Academic Department *</label>
                   <input type="text" id="dept" value="Computer Science & Engineering" required>
                 </div>
 
@@ -235,11 +266,12 @@
 
                 <div class="form-checkbox">
                   <input type="checkbox" id="terms" checked required>
-                  <label for="terms">I agree to the college laboratory and event guidelines.</label>
+                  <label for="terms">I agree to follow the campus laboratory and hackathon guidelines.</label>
                 </div>
 
                 <button type="submit" class="btn btn-primary btn-block">Submit Registration ✓</button>
               </form>
+              <div class="home-indicator"></div>
             </div>
           </div>
 
@@ -247,12 +279,12 @@
           <div id="screen-confirm" class="screen">
             <div class="screen-scroll confirm-layout">
               <div class="success-badge-circle">✓</div>
-              <h2>Registration Successful!</h2>
-              <p class="confirm-sub">Your seat for HackNIE 2026 has been reserved. A confirmation digital pass was sent to your email.</p>
+              <h2>Registration Confirmed! 🎉</h2>
+              <p class="confirm-sub">Your seat for HackNIE 2026 is confirmed. A digital ticket and QR pass have been sent to your college email.</p>
 
               <div class="digital-ticket">
                 <div class="ticket-header">
-                  <span class="ticket-type">CAMPUS PASS</span>
+                  <span class="ticket-type">OFFICIAL CAMPUS PASS</span>
                   <span class="ticket-id">#NIE-2026-9481</span>
                 </div>
                 <div class="ticket-divider"></div>
@@ -261,7 +293,7 @@
                   <div class="t-row"><span class="t-lbl">Participant:</span> <span class="t-val">Sharma Shubh</span></div>
                   <div class="t-row"><span class="t-lbl">USN:</span> <span class="t-val">4NI25CS191</span></div>
                   <div class="t-row"><span class="t-lbl">Date & Venue:</span> <span class="t-val">21 Nov 2026 • Sir MV Hall</span></div>
-                  <div class="t-row"><span class="t-lbl">Seat Status:</span> <span class="t-val confirmed">Confirmed (Desk A-14)</span></div>
+                  <div class="t-row"><span class="t-lbl">Status:</span> <span class="t-val confirmed">Confirmed (Desk A-14)</span></div>
                 </div>
                 <div class="qr-placeholder">
                   <span>📱 Show this Pass at Registration Desk</span>
@@ -269,7 +301,8 @@
               </div>
 
               <button class="btn btn-primary btn-block back-to-home-btn">Back to Home 🏠</button>
-              <button class="btn btn-secondary btn-block view-my-events">View My Registered Events</button>
+              <button class="btn btn-secondary btn-block view-my-events">📥 Download Ticket (PDF)</button>
+              <div class="home-indicator"></div>
             </div>
           </div>
 
